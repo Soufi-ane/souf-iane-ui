@@ -1,18 +1,33 @@
 {
-  "name": "@soufiane/components",
+  "name": "@souf-iane/components",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.esm.js"
+  },
+  "file": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soufi-ane/-soufiane-components.git"
+  },
+  "description": "UI components for fast development",
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.1",
