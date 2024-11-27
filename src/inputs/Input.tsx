@@ -8,8 +8,13 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({ type, label, onChange }) => {
   return (
     <span>
-      <label>{label}</label>
-      <input type={type} onChange={(e) => onChange(e.target.value)} />
+      <label>hellllooo</label>
+      <input
+        className="bg-red-500 border-2 border-black"
+        type={type}
+        placeholder={label}
+        onChange={(e) => onChange(e.target.value)}
+      />
     </span>
   );
 };
